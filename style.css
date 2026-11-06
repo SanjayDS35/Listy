@@ -1,0 +1,37 @@
+:root{--bg:#f2f4f6;--surface:#fff;--ink:#14202b;--mute:#5b6875;--line:#d9dee3;--ai:#4a3fd1;--fin:#17694f;--hot:#c2410c;--soft:#e8ebf5;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#0f161d;--surface:#17212b;--ink:#e8edf2;--mute:#97a4b1;--line:#2a3743;--ai:#9a91ff;--fin:#4fc79c;--hot:#ff9a62;--soft:#1f2b38;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 15px/1.5 "Instrument Sans",system-ui,sans-serif}
+.wrap{max-width:960px;margin:0 auto;padding:28px 18px 60px}
+h1{font:700 clamp(26px,5vw,38px)/1.1 "Familjen Grotesk",system-ui,sans-serif;margin:0 0 6px}
+.sub{color:var(--mute);margin:0 0 20px}
+.banner{background:var(--soft);border-radius:8px;padding:9px 12px;font-size:13px;margin-bottom:16px}
+.runway{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:14px 16px 10px;margin-bottom:20px}
+.runway h2{font:500 14px "Familjen Grotesk",sans-serif;margin:0 0 10px;color:var(--mute)}
+.track{position:relative;height:54px;border-bottom:2px solid var(--line);margin:0 6px}
+.tick{position:absolute;bottom:-22px;font-size:11px;color:var(--mute);transform:translateX(-50%)}
+.dot{position:absolute;width:14px;height:14px;border-radius:50%;border:2px solid var(--surface);cursor:pointer;transform:translateX(-50%);padding:0}
+.dot.AI{background:var(--ai)}.dot.Finance{background:var(--fin)}.dot.both{background:linear-gradient(90deg,var(--ai) 50%,var(--fin) 50%)}
+button:focus-visible,select:focus-visible,input:focus-visible,a:focus-visible{outline:3px solid var(--ai);outline-offset:2px}
+.legend{margin-top:30px;font-size:12px;color:var(--mute);display:flex;gap:16px;flex-wrap:wrap}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px}
+.bar{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:12px}
+input[type=search],select{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:9px 11px}
+input[type=search]{flex:1 1 220px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.chip{font:500 13px "Instrument Sans",sans-serif;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:99px;padding:6px 13px;cursor:pointer}
+.chip[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.count{color:var(--mute);font-size:13px;margin:4px 0 10px}
+.row{display:grid;grid-template-columns:86px 1fr auto;gap:14px;align-items:start;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--line);padding:14px 16px;margin-bottom:8px;border-radius:8px}
+.row.AI,.row.both{border-left-color:var(--ai)}.row.Finance{border-left-color:var(--fin)}
+.days b{display:block;font:700 30px/1 "Familjen Grotesk",sans-serif}
+.days span{font-size:12px;color:var(--mute)}.days.soon b{color:var(--hot)}
+.row h3{font:600 17px/1.25 "Instrument Sans",sans-serif;margin:0 0 2px}
+.row h3 a{color:inherit}
+.org{color:var(--mute);font-size:14px;margin:0 0 8px}
+.tags{display:flex;flex-wrap:wrap;gap:6px}.tag{font-size:12px;background:var(--soft);border-radius:5px;padding:2px 8px}
+.note{margin:8px 0 0;font-size:14px;max-width:62ch}
+.save{border:1px solid var(--line);background:none;color:var(--ink);border-radius:8px;padding:7px 11px;font:500 13px "Instrument Sans",sans-serif;cursor:pointer}
+.save[aria-pressed=true]{background:var(--ai);color:#fff;border-color:var(--ai)}
+.empty{padding:34px 10px;text-align:center;color:var(--mute)}
+@media (max-width:560px){.row{grid-template-columns:64px 1fr}.save{grid-column:2;justify-self:start}}

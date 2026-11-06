@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI and finance opportunities</title>
+<link href="https://fonts.googleapis.com/css2?family=Familjen+Grotesk:wght@500;700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+<h1>AI and finance opportunities</h1>
+<p class="sub">Internships, hackathons, fellowships and scholarships, sorted by what closes first.</p>
+<div class="banner" id="banner" hidden>This is sample data. Replace the entries in data/listings.json with real, verified listings.</div>
+<section class="runway" aria-label="Deadlines in the next 45 days">
+<h2>Next 45 days</h2><div class="track" id="track"></div>
+<div class="legend"><span><i style="background:var(--ai)"></i>AI</span><span><i style="background:var(--fin)"></i>Finance</span><span><i style="background:linear-gradient(90deg,var(--ai) 50%,var(--fin) 50%)"></i>AI and finance</span></div>
+</section>
+<div class="bar">
+<input type="search" id="q" placeholder="Search title or organization" aria-label="Search">
+<select id="region" aria-label="Region"></select>
+<select id="funding" aria-label="Funding"><option value="">Any funding</option><option>Paid</option><option>Fully funded</option><option>Prize</option><option>Unpaid</option></select>
+<select id="level" aria-label="Level"><option value="">Any level</option><option>Undergraduate</option><option>Graduate</option><option>Early career</option><option>Anyone</option></select>
+</div>
+<div class="chips" id="types"></div><div class="chips" id="domains"></div>
+<div class="count" id="count"></div><div id="list"></div>
+</div>
+<script src="app.js" defer></script>
+</body>
+</html>
